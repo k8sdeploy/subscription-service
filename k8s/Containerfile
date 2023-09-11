@@ -1,0 +1,49 @@
+# Build
+FROM golang:alpine3.15 AS builder
+
+RUN mkdir -p /home/builder
+WORKDIR /home/builder
+
+## Download dependencies
+COPY go.mod .
+COPY go.sum .
+RUN rm -f .env
+RUN go mod download
+
+## Copy files
+COPY ../ .
+ARG BUILD
+ARG VERSION
+ARG SERVICE_NAME
+
+RUN go build -ldflags "-w -s -X main.BuildVersion=${VERSION} -X main.BuildHash=${BUILD} -X main.ServiceName=${SERVICE_NAME}" -o ./bin/${SERVICE_NAME} -v ./cmd/${SERVICE_NAME}/main.go
+RUN cp ./bin/${SERVICE_NAME} /
+
+# Runner
+FROM alpine:3.15 AS Runner
+ARG SERVICE_NAME
+
+RUN apk update
+RUN apk upgrade
+RUN apk add ca-certificates && update-ca-certificates
+RUN apk add --update tzdata
+RUN rm -rf /var/cache/apk/*
+
+COPY --from=builder /${SERVICE_NAME} /home/
+
+## Set the timezone
+ENV TZ=Europe/London
+
+WORKDIR /home
+
+## Set the entrypoint
+RUN echo "#!/bin/bash" >> ./entrypoint.sh
+RUN echo "./${SERVICE_NAME}" >> ./entrypoint.sh
+RUN chmod +x ./entrypoint.sh
+ENTRYPOINT ["sh", "./entrypoint.sh"]
+
+## Healthcheck to keep system alive
+HEALTHCHECK --interval=5s --timeout=2s --retries=12 CMD curl --silent --fail localhost/probe || exit 1
+
+## Expose the main ports
+EXPOSE 80 3000
