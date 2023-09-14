@@ -47,7 +47,7 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: subscription-service-secrets
-                  key: mongo-agent-collection
+                  key: mongo-subscription-collection
             - name: MONGO_DB
               valueFrom:
                 secretKeyRef:
