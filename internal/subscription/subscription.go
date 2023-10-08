@@ -44,11 +44,22 @@ func (r *RealMongoOperations) FindOne(ctx context.Context, filter interface{}) *
 	return r.Client.Database(r.Database).Collection(r.Collection).FindOne(ctx, filter)
 }
 
-type AgentLimits struct {
+type AccountLimits struct {
 	CompanyId     string `bson:"company_id"`
-	AgentLimit    int    `bson:"limit"`
-	UsedAgents    int    `bson:"used"`
 	Grandfathered bool   `bson:"grandfathered"`
+
+	Agents   Agents   `bson:"agents"`
+	Projects Projects `bson:"projects"`
+}
+
+type Agents struct {
+	Limit int `bson:"limit"`
+	Used  int `bson:"used"`
+}
+
+type Projects struct {
+	Limit int `bson:"limit"`
+	Used  int `bson:"used"`
 }
 
 type Service struct {
@@ -66,7 +77,7 @@ func NewSubscriptionService(ctx context.Context, cfg config.Config, ops MongoOpe
 	}
 }
 
-func (s *Service) GetAgentLimit(companyId string) (*AgentLimits, error) {
+func (s *Service) GetAgentLimit(companyId string) (*AccountLimits, error) {
 	filter := map[string]interface{}{
 		"company_id": companyId,
 	}
@@ -85,16 +96,16 @@ func (s *Service) GetAgentLimit(companyId string) (*AgentLimits, error) {
 		return nil, logs.Errorf("error finding agent limit: %v", result.Err())
 	}
 
-	var agentLimit AgentLimits
-	err := result.Decode(&agentLimit)
+	var accountLimits AccountLimits
+	err := result.Decode(&accountLimits)
 	if err != nil {
 		return nil, logs.Errorf("error decoding agent limit: %v", err)
 	}
 
-	return &agentLimit, nil
+	return &accountLimits, nil
 }
 
-func (s *Service) UpdateAgentLimit(companyId string, limit int) (*AgentLimits, error) {
+func (s *Service) UpdateAgentLimit(companyId string, limit int) (*Agents, error) {
 	oldLimits, err := s.GetAgentLimit(companyId)
 	if err != nil {
 		return nil, logs.Errorf("error getting agent limit: %v", err)
@@ -112,8 +123,8 @@ func (s *Service) UpdateAgentLimit(companyId string, limit int) (*AgentLimits, e
 	newMinLimit := s.getLowLimit(limit, oldLimits.Grandfathered)
 	if _, err := s.MongoOps.UpdateOne(s.Context,
 		bson.D{{"company_id", companyId}},
-		bson.D{{"$set", bson.M{
-			"limit": newMinLimit,
+		bson.D{{"$set", bson.D{
+			{"agents.limit", limit},
 		}}}); err != nil {
 		return nil, logs.Errorf("error updating agent limit: %v", err)
 	}
@@ -123,7 +134,7 @@ func (s *Service) UpdateAgentLimit(companyId string, limit int) (*AgentLimits, e
 	}, nil
 }
 
-func (s *Service) UpdateUsedAgent(companyId string, used int) (*AgentLimits, error) {
+func (s *Service) UpdateUsedAgent(companyId string, used int) (*AccountLimits, error) {
 	oldLimits, err := s.GetAgentLimit(companyId)
 	if err != nil {
 		return nil, logs.Errorf("error getting agent limit: %v", err)
@@ -140,15 +151,17 @@ func (s *Service) UpdateUsedAgent(companyId string, used int) (*AgentLimits, err
 
 	if _, err := s.MongoOps.UpdateOne(s.Context,
 		bson.D{{"company_id", companyId}},
-		bson.D{{"$set", bson.M{
-			"used": used,
+		bson.D{{"$set", bson.D{
+			{"agents.used", used},
 		}}}); err != nil {
 		return nil, logs.Errorf("error updating agent limit: %v", err)
 	}
 
-	return &AgentLimits{
-		AgentLimit: oldLimits.AgentLimit,
-		UsedAgents: used,
+	return &AccountLimits{
+		Agents: Agents{
+			Limit: oldLimits.Agents.Limit,
+			Used:  used,
+		},
 	}, nil
 }
 
