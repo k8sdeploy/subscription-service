@@ -7,7 +7,7 @@ require (
 	github.com/caarlos0/env/v8 v8.0.0
 	github.com/go-chi/chi/v5 v5.0.10
 	github.com/go-chi/cors v1.2.1
-	github.com/hashicorp/vault/sdk v0.10.0
+	github.com/hashicorp/vault/sdk v0.10.2
 	github.com/k8sdeploy/protobufs v0.0.0-20230911122335-17a24e787864
 	github.com/keloran/go-config v0.3.0
 	github.com/keloran/go-healthcheck v1.2.1
