@@ -31,8 +31,8 @@ func (s *Server) GetAgentLimit(ctx context.Context, req *pb.GetAgentLimitRequest
 	}
 
 	return &pb.GetAgentLimitResponse{
-		Limit:         int32(ad.AgentLimit),
-		Used:          int32(ad.UsedAgents),
+		Limit:         int32(ad.Agents.Limit),
+		Used:          int32(ad.Agents.Used),
 		Grandfathered: &ad.Grandfathered,
 	}, nil
 }
@@ -56,7 +56,7 @@ func (s *Server) UpdateAgentLimit(ctx context.Context, req *pb.UpdateAgentLimitR
 	}
 
 	return &pb.GetAgentLimitResponse{
-		Limit: int32(ad.AgentLimit),
+		Limit: int32(ad.Limit),
 	}, nil
 }
 
@@ -79,7 +79,7 @@ func (s *Server) UpdateUsedAgent(ctx context.Context, req *pb.UpdateUsedAgentReq
 	}
 
 	return &pb.GetAgentLimitResponse{
-		Used:  int32(ad.UsedAgents),
-		Limit: int32(ad.AgentLimit),
+		Used:  int32(ad.Agents.Used),
+		Limit: int32(ad.Agents.Limit),
 	}, nil
 }
