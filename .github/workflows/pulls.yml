@@ -23,23 +23,6 @@ jobs:
           fetch-depth: 1
       - name: test
         run: go test -v -race -bench=./... -benchmem -timeout=120s -bench=./... ./...
-  qodana:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      pull-requests: write
-      checks: write
-    needs:
-      - test
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          ref: ${{ github.event.pull_request.head.sha }}  # to check out the actual pull request commit, not the merge commit
-          fetch-depth: 0  # a full history is required for pull request analysis
-      - name: 'Qodana Scan'
-        uses: JetBrains/qodana-action@v2023.2
-        env:
-          QODANA_TOKEN: ${{ secrets.QODANA_TOKEN }}
   auto-merge:
     runs-on: ubuntu-latest
     permissions:
