@@ -129,8 +129,8 @@ func (s *Service) UpdateAgentLimit(companyId string, limit int) (*Agents, error)
 		return nil, logs.Errorf("error updating agent limit: %v", err)
 	}
 
-	return &AgentLimits{
-		AgentLimit: newMinLimit,
+	return &Agents{
+		Limit: newMinLimit,
 	}, nil
 }
 
