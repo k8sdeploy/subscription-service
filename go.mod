@@ -12,7 +12,7 @@ require (
 	github.com/keloran/go-config v0.4.1
 	github.com/keloran/go-healthcheck v1.2.1
 	go.mongodb.org/mongo-driver v1.13.1
-	google.golang.org/grpc v1.59.0
+	google.golang.org/grpc v1.60.0
 )
 
 require (
