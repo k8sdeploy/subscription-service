@@ -65,8 +65,8 @@ github.com/hashicorp/vault/sdk v0.10.2 h1:0UEOLhFyoEMpb/r8H5qyOu58A/j35pncqiS/d+
 github.com/hashicorp/vault/sdk v0.10.2/go.mod h1:VxJIQgftEX7FCDM3i6TTLjrZszAeLhqPicNbCVNRg4I=
 github.com/k8sdeploy/protobufs v0.0.0-20230923213413-7d6744bffeb3 h1:eLqis2THI/IIGd2WF8t+Tn8kPEpIx8CuCRvXW6PB2Eo=
 github.com/k8sdeploy/protobufs v0.0.0-20230923213413-7d6744bffeb3/go.mod h1:Yj+InQSwT2+zERInb0QQzoQBGgYUOvkQMookh6TcL0s=
-github.com/keloran/go-config v0.4.1 h1:0RCkxK9dnoseRbaXdVu/9EuIAj4wfDMj8Lv3C9ZooCg=
-github.com/keloran/go-config v0.4.1/go.mod h1:133jjY4NNjIO4Loo6M/zQLmtLh5a2xp28E4MyaypXV8=
+github.com/keloran/go-config v0.4.2 h1:ufkRbvg/0ft62tjFnA8lUQCyNnVleoGd8SwmRb5EPC4=
+github.com/keloran/go-config v0.4.2/go.mod h1:KxS15MfqGbUw01Um/GJbnOM46oeEB8pQAKDRYJMunM4=
 github.com/keloran/go-healthcheck v1.2.1 h1:BmqjL0HOsIY5YYm74l28gpds1lzhR/tlEVBN4YoiWR4=
 github.com/keloran/go-healthcheck v1.2.1/go.mod h1:Cwa0dsTKUH7r4JgiF5Ho4pWDgvYat3nSm8owc0cyRAw=
 github.com/keloran/vault-helper v0.8.2 h1:Nmsb3XAhuaLQRv+LirOTSjdv6WcJuqNK+7xnOLAa+ME=
