@@ -8,7 +8,7 @@ require (
 	github.com/go-chi/chi/v5 v5.0.12
 	github.com/go-chi/cors v1.2.1
 	github.com/hashicorp/vault/sdk v0.11.0
-	github.com/k8sdeploy/protobufs v0.0.1
+	github.com/k8sdeploy/protobufs v0.0.2
 	github.com/keloran/go-config v0.4.2
 	github.com/keloran/go-healthcheck v1.2.1
 	go.mongodb.org/mongo-driver v1.14.0
