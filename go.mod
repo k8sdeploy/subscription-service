@@ -17,7 +17,7 @@ require (
 
 require (
 	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
-	github.com/go-jose/go-jose/v3 v3.0.2 // indirect
+	github.com/go-jose/go-jose/v3 v3.0.3 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-ping/ping v1.1.0 // indirect
 	github.com/golang/protobuf v1.5.3 // indirect
