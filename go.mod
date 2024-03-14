@@ -1,6 +1,7 @@
 module github.com/k8sdeploy/subscription-service
 
 go 1.21
+toolchain go1.22.1
 
 require (
 	github.com/bugfixes/go-bugfixes v0.10.0
@@ -10,7 +11,7 @@ require (
 	github.com/hashicorp/vault/sdk v0.11.1
 	github.com/k8sdeploy/protobufs v0.0.2
 	github.com/keloran/go-config v0.5.1
-	github.com/keloran/go-healthcheck v1.2.1
+	github.com/keloran/go-healthcheck v1.2.2
 	go.mongodb.org/mongo-driver v1.14.0
 	google.golang.org/grpc v1.62.1
 )
