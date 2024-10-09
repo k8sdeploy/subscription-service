@@ -1,13 +1,14 @@
 module github.com/k8sdeploy/subscription-service
 
 go 1.21
+toolchain go1.22.5
 
 require (
 	github.com/bugfixes/go-bugfixes v0.13.0
 	github.com/caarlos0/env/v8 v8.0.0
 	github.com/go-chi/chi/v5 v5.1.0
 	github.com/go-chi/cors v1.2.1
-	github.com/hashicorp/vault/sdk v0.13.0
+	github.com/hashicorp/vault/sdk v0.14.0
 	github.com/k8sdeploy/protobufs v0.0.2
 	github.com/keloran/go-config v0.5.4
 	github.com/keloran/go-healthcheck v1.2.1
@@ -18,7 +19,7 @@ require (
 require (
 	github.com/Nerzal/gocloak/v13 v13.9.0 // indirect
 	github.com/cenkalti/backoff/v3 v3.2.2 // indirect
-	github.com/go-jose/go-jose/v3 v3.0.3 // indirect
+	github.com/go-jose/go-jose/v4 v4.0.1 // indirect
 	github.com/go-logfmt/logfmt v0.6.0 // indirect
 	github.com/go-ping/ping v1.1.0 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
@@ -34,7 +35,7 @@ require (
 	github.com/hashicorp/go-secure-stdlib/strutil v0.1.2 // indirect
 	github.com/hashicorp/go-sockaddr v1.0.6 // indirect
 	github.com/hashicorp/hcl v1.0.1-vault-5 // indirect
-	github.com/hashicorp/vault/api v1.12.0 // indirect
+	github.com/hashicorp/vault/api v1.14.0 // indirect
 	github.com/keloran/vault-helper v0.8.2 // indirect
 	github.com/klauspost/compress v1.17.7 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
