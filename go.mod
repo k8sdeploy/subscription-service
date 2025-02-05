@@ -5,7 +5,7 @@ go 1.21
 require (
 	github.com/bugfixes/go-bugfixes v0.13.0
 	github.com/caarlos0/env/v8 v8.0.0
-	github.com/go-chi/chi/v5 v5.2.0
+	github.com/go-chi/chi/v5 v5.2.1
 	github.com/go-chi/cors v1.2.1
 	github.com/hashicorp/vault/sdk v0.13.0
 	github.com/k8sdeploy/protobufs v0.0.2
