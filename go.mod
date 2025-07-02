@@ -6,7 +6,7 @@ require (
 	github.com/bugfixes/go-bugfixes v0.14.0
 	github.com/caarlos0/env/v8 v8.0.0
 	github.com/go-chi/chi/v5 v5.2.2
-	github.com/go-chi/cors v1.2.1
+	github.com/go-chi/cors v1.2.2
 	github.com/hashicorp/vault/sdk v0.18.0
 	github.com/k8sdeploy/protobufs v0.0.2
 	github.com/keloran/go-config v0.5.4
