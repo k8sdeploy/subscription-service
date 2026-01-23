@@ -3,7 +3,7 @@ module github.com/k8sdeploy/subscription-service
 go 1.25.0
 
 require (
-	github.com/bugfixes/go-bugfixes v0.14.0
+	github.com/bugfixes/go-bugfixes v0.14.1
 	github.com/caarlos0/env/v8 v8.0.0
 	github.com/go-chi/chi/v5 v5.2.4
 	github.com/go-chi/cors v1.2.2
@@ -19,7 +19,7 @@ require (
 	github.com/Nerzal/gocloak/v13 v13.9.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
 	github.com/go-jose/go-jose/v4 v4.1.3 // indirect
-	github.com/go-logfmt/logfmt v0.6.0 // indirect
+	github.com/go-logfmt/logfmt v0.6.1 // indirect
 	github.com/go-ping/ping v1.1.0 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
 	github.com/golang-jwt/jwt/v5 v5.2.2 // indirect
