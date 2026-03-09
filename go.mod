@@ -1,9 +1,9 @@
 module github.com/k8sdeploy/subscription-service
 
-go 1.25.0
+go 1.26.1
 
 require (
-	github.com/bugfixes/go-bugfixes v0.14.1
+	github.com/bugfixes/go-bugfixes v0.15.1
 	github.com/caarlos0/env/v8 v8.0.0
 	github.com/go-chi/chi/v5 v5.2.5
 	github.com/go-chi/cors v1.2.2
