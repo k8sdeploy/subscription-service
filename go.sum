@@ -1,7 +1,7 @@
 github.com/Nerzal/gocloak/v13 v13.9.0 h1:YWsJsdM5b0yhM2Ba3MLydiOlujkBry4TtdzfIzSVZhw=
 github.com/Nerzal/gocloak/v13 v13.9.0/go.mod h1:YYuDcXZ7K2zKECyVP7pPqjKxx2AzYSpKDj8d6GuyM10=
-github.com/bugfixes/go-bugfixes v0.16.0 h1:X94vZzR4o/bbhIdVtPfojOu7hrBhA+UvWc/g0LYXq6g=
-github.com/bugfixes/go-bugfixes v0.16.0/go.mod h1:Cp28R3G7ThAdkQo1UjjMtvSbAq3rtD4SdINNYE/hHs4=
+github.com/bugfixes/go-bugfixes v0.16.1 h1:ydT7McLiGQvMMhPhL0gynUO1CTZHVc5HUnLW4h0Pauw=
+github.com/bugfixes/go-bugfixes v0.16.1/go.mod h1:Cp28R3G7ThAdkQo1UjjMtvSbAq3rtD4SdINNYE/hHs4=
 github.com/caarlos0/env/v8 v8.0.0 h1:POhxHhSpuxrLMIdvTGARuZqR4Jjm8AYmoi/JKlcScs0=
 github.com/caarlos0/env/v8 v8.0.0/go.mod h1:7K4wMY9bH0esiXSSHlfHLX5xKGQMnkH5Fk4TDSSSzfo=
 github.com/cenkalti/backoff/v4 v4.3.0 h1:MyRJ/UdXutAwSAT+s3wNd7MfTIcy71VQueUuFK343L8=
