@@ -67,8 +67,8 @@ github.com/hashicorp/hcl v1.0.1-vault-7 h1:ag5OxFVy3QYTFTJODRzTKVZ6xvdfLLCA1cy/Y
 github.com/hashicorp/hcl v1.0.1-vault-7/go.mod h1:XYhtn6ijBSAj6n4YqAaf7RBPS4I06AItNorpy+MoQNM=
 github.com/hashicorp/vault/api v1.16.0 h1:nbEYGJiAPGzT9U4oWgaaB0g+Rj8E59QuHKyA5LhwQN4=
 github.com/hashicorp/vault/api v1.16.0/go.mod h1:KhuUhzOD8lDSk29AtzNjgAu2kxRA9jL9NAbkFlqvkBA=
-github.com/hashicorp/vault/sdk v0.24.0 h1:4/8w/puVy751oHZlD2nVgDQPfqHy6gC61dU9QnMZZ0g=
-github.com/hashicorp/vault/sdk v0.24.0/go.mod h1:UUFZi1+tFZIIGnuXTghetJ5FpjAsyHeQDobzRW/rztE=
+github.com/hashicorp/vault/sdk v0.25.0 h1:BbosMCoMLceSnd/omrC6SQQ75cxmie51Exwtxhb5a8U=
+github.com/hashicorp/vault/sdk v0.25.0/go.mod h1:UUFZi1+tFZIIGnuXTghetJ5FpjAsyHeQDobzRW/rztE=
 github.com/k8sdeploy/protobufs v0.0.2 h1:zTf2ETMACIybNTRXBCk3N1RPvcS4bd+PAoxtB5b7AR4=
 github.com/k8sdeploy/protobufs v0.0.2/go.mod h1:Yj+InQSwT2+zERInb0QQzoQBGgYUOvkQMookh6TcL0s=
 github.com/keloran/go-config v0.5.4 h1:fw1jRiUffV1yFFBTBdQZc/aWbE4BAsNKxqYMy5NyrgQ=
