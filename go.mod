@@ -18,7 +18,7 @@ require (
 require (
 	github.com/Nerzal/gocloak/v13 v13.9.0 // indirect
 	github.com/cenkalti/backoff/v4 v4.3.0 // indirect
-	github.com/go-jose/go-jose/v4 v4.1.3 // indirect
+	github.com/go-jose/go-jose/v4 v4.1.4 // indirect
 	github.com/go-logfmt/logfmt v0.6.1 // indirect
 	github.com/go-ping/ping v1.1.0 // indirect
 	github.com/go-resty/resty/v2 v2.7.0 // indirect
